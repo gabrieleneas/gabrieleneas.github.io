@@ -39,7 +39,8 @@
 
         #title1,
         #title2,
-        #title3 {
+        #title3,
+        #timeContainer {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
@@ -52,25 +53,15 @@
             font-size: 6vw; /* Responsivo em relação à largura da tela */
             margin-top: 10px;
         }
-
-        #imageContainer {
-            margin-top: 20px;
-        }
-
-        #imageContainer img {
-            width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
-            max-width: 600px; /* Limita a largura máxima da imagem */
-            height: auto; /* Mantém a proporção da imagem */
-        }
     </style>
 </head>
 <body>
-    <div id="title1">Já pagamos todo o dinheiro do Giovanni? 🤔</div>
-    <div id="title2">AINDA NÃO PAGAMOS 👎👎.</div>
-    <div id="title3">Estamos a X dias sem pagar o fotógrafo 😔👌.</div>
+    <div id="title1">Já pagamos todo o dinheiro do Giovanni?</div>
+    <div id="title2">AINDA NÃO PAGAMOS.</div>
+    <div id="title3">Estamos a X dias sem pagar o fotógrafo.</div>
     
-    <div id="imageContainer">
-        <img src="clown.png" alt="">
+    <div id="timeContainer">
+        <span id="minutes">00</span>:<span id="seconds">00</span>
     </div>
 
     <script>
@@ -78,7 +69,26 @@
         var dataAtual = new Date();
         var diferencaEmMilissegundos = dataAtual - dataEspecifica;
         var diferencaEmDias = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
-        document.getElementById('title3').innerText = "Estamos a " + diferencaEmDias + " dias sem pagar o fotógrafo. 😔👌";
+        document.getElementById('title3').innerText = "Estamos a " + diferencaEmDias + " dias sem pagar o fotógrafo.";
+
+        // Função para atualizar os minutos e segundos a cada segundo
+        function updateClock() {
+            var agora = new Date();
+            var diferencaEmSegundos = Math.floor((agora - dataAtual) / 1000);
+            var minutos = Math.floor(diferencaEmSegundos / 60);
+            var segundos = diferencaEmSegundos % 60;
+
+            // Adiciona um zero à esquerda se for menor que 10
+            minutos = minutos < 10 ? "0" + minutos : minutos;
+            segundos = segundos < 10 ? "0" + segundos : segundos;
+
+            // Atualiza os elementos no HTML
+            document.getElementById('minutes').innerText = minutos;
+            document.getElementById('seconds').innerText = segundos;
+        }
+
+        // Atualiza o relógio a cada segundo
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>
