@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Já pagamos todo o dinheiro do Giovanni?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: repeating-linear-gradient(
+                0deg,
+                #ff0000,
+                #ff0000 20px,
+                #ff8000 20px,
+                #ff8000 40px,
+                #ffff00 40px,
+                #ffff00 60px,
+                #00ff00 60px,
+                #00ff00 80px,
+                #00ffff 80px,
+                #00ffff 100px,
+                #0000ff 100px,
+                #0000ff 120px,
+                #8000ff 120px,
+                #8000ff 140px,
+                #ff00ff 140px,
+                #ff00ff 160px,
+                #ff0080 160px,
+                #ff0080 180px
+                /* Add more colors and stop points as needed */
+            );
+        }
+
+        #title1,
+        #title2,
+        #title3 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff; /* White text color */
+            text-shadow: -2px -2px 4px #000000;
+            margin-top: 20px;
+        }
+
+        #title2 {
+            font-size: 6vw; /* Responsivo em relação à largura da tela */
+            margin-top: 10px;
+        }
+
+        #imageContainer {
+            margin-top: 20px;
+        }
+
+        #imageContainer img {
+            width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
+            max-width: 600px; /* Limita a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    </style>
+</head>
+<body>
+    <div id="title1">Já pagamos todo o dinheiro do Giovanni?</div>
+    <div id="title2">AINDA NÃO PAGAMOS.</div>
+    <div id="title3">Estamos a X dias sem pagar o fotógrafo.</div>
+    
+    <div id="imageContainer">
+        <img src="sua-imagem-aqui.jpg" alt="Descrição da imagem">
+    </div>
+
+    <script>
+        var dataEspecifica = new Date(2023, 11, 21);
+        var dataAtual = new Date();
+        var diferencaEmMilissegundos = dataAtual - dataEspecifica;
+        var diferencaEmDias = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+        document.getElementById('title3').innerText = "Estamos a " + diferencaEmDias + " dias sem pagar o fotógrafo.";
+    </script>
+</body>
+</html>
