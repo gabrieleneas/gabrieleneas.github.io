@@ -1,184 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-lt-installed="true">
-
-
+<html lang="pt-br">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://meiaentrada.org.br/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://meiaentrada.org.br/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://meiaentrada.org.br/favicons/favicon-16x16.png">
-    <link rel="manifest" href="https://meiaentrada.org.br/manifest.json">
-    <link rel="mask-icon" href="https://meiaentrada.org.br/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="https://meiaentrada.org.br/favicons/favicon.ico">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Meia-entrada.org.br">
-    <meta name="application-name" content="Meia-entrada.org.br">
-    <meta name="theme-color" content="#487c99">
-    <meta name="description"
-        content="Uma forma descomplicada de verificar a validade da Carteira de Identificação Estudantil (CIE), evitar fraudes e comprovar o cumprimento integral da Lei da Meia-entrada.">
-    <title>Meia-entrada estudantil</title>
-    <link href="./Meia-entrada estudantil_files/main.8296a90d.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
-    <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
-    <style lang="en" type="text/css" id="dark-mode-custom-style"></style>
-    <style lang="en" type="text/css" id="dark-mode-native-style"></style>
-    <style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Já pagamos todo o dinheiro do Giovanni?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: repeating-linear-gradient(
+                0deg,
+                #ff0000,
+                #ff0000 20px,
+                #ff8000 20px,
+                #ff8000 40px,
+                #ffff00 40px,
+                #ffff00 60px,
+                #00ff00 60px,
+                #00ff00 80px,
+                #00ffff 80px,
+                #00ffff 100px,
+                #0000ff 100px,
+                #0000ff 120px,
+                #8000ff 120px,
+                #8000ff 140px,
+                #ff00ff 140px,
+                #ff00ff 160px,
+                #ff0080 160px,
+                #ff0080 180px
+                /* Add more colors and stop points as needed */
+            );
+        }
+
+        #title1,
+        #title2,
+        #title3 {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff; /* White text color */
+            text-shadow: -2px -2px 4px #000000;
+            margin-top: 20px;
+        }
+
+        #title2 {
+            font-size: 6vw; /* Responsivo em relação à largura da tela */
+            margin-top: 10px;
+        }
+
+        #imageContainer {
+            margin-top: 20px;
+        }
+
+        #imageContainer img {
+            width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
+            max-width: 600px; /* Limita a largura máxima da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+    </style>
 </head>
-
 <body>
-    <div id="root">
-        <div class="App">
-            <header>
-                <nav class="navbar navbar-expand-xl navbar-dark fixed-top mainNavbar py-0">
-                    <div class="container"><a class="navbar-brand logo-link py-0" aria-label="Logo"
-                            href="https://meiaentrada.org.br/"><img
-                                src="./Meia-entrada estudantil_files/logo-meia-entrada.1880ce37.svg" height="80"
-                                class="d-inline-block align-top" alt="Logo"></a><button class="navbar-toggler "
-                            type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false"
-                            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownLei"
-                                        title="O que diz a lei" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" href="https://meiaentrada.org.br/lei">Lei da
-                                        Meia-entrada</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownLei"><a
-                                            class="dropdown-item" href="https://meiaentrada.org.br/lei">A Lei</a><a
-                                            class="dropdown-item"
-                                            href="https://meiaentrada.org.br/lei/padraonacional">Padrão Nacional</a><a
-                                            class="dropdown-item"
-                                            href="https://meiaentrada.org.br/lei/comocomunicar">Como Funciona</a></div>
-                                </li>
-                                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active"
-                                        aria-current="page" id="navbarDropdownValidacao"
-                                        title="Valide a Carteira de Identificação Estudantil (CIE)"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                        href="https://meiaentrada.org.br/validador">Validação</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownValidacao"><a
-                                            class="dropdown-item"
-                                            href="https://meiaentrada.org.br/validador/itens-de-seguranca">Itens de
-                                            segurança</a></div>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" title="Validador oficial"
-                                        href="https://meiaentrada.org.br/chaves-publicas">Chaves públicas</a></li>
-                                <li class="nav-item"><a class="nav-link" title="Perguntas e respostas"
-                                        href="https://meiaentrada.org.br/perguntas-e-respostas">FAQ</a></li>
-                                <li class="nav-item"><a class="nav-link" title="Notícias"
-                                        href="https://meiaentrada.org.br/noticias">Notícias</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            <div class="page-content">
-                <div>
-                    <section class="py-5">
-                        <div class="meiaentrada-title mb-5">
-                            <div class="container">
-                                <div class="meiaentrada-title-border-hide">
-                                    <h1>Validação de CIE <span class="small">(Carteira de Identificação
-                                            Estudantil)</span></h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div>
-                                <div class="alert alert-success text-center" role="alert">
-                                    <h4 class="alert-heading my-3">Documento válido!</h4>
-                                </div>
-                                <div>
-                                    <div>
-                                        <p class="text-center">UBES atesta que Gabriel Eneas Soares é estudante e
-                                            está regularmente matriculado(a) em Ensino Tecnico da instituição Teatro
-                                            Escola Macunaima </p>
-                                    </div>
-                                    <div class="row mb-5">
-                                        <div class="col-lg-10 col-md-8">
-                                            <div class="row border border-left-0 border-right-0 py-2">
-                                                <div class="col-md-3 text-md-right"><b>Nome:</b></div>
-                                                <div class="col-md-9">Gabriel Eneas Soares</div>
-                                            </div>
-                                            <div class="row border border-left-0 border-right-0 border-top-0 py-2">
-                                                <div class="col-md-3 text-md-right"><b>Instituição:</b></div>
-                                                <div class="col-md-9">Teatro Escola Macunaima </div>
-                                            </div>
-                                            <div class="row border border-left-0 border-right-0 border-top-0 py-2">
-                                                <div class="col-md-3 text-md-right"><b>Curso:</b></div>
-                                                <div class="col-md-9">Ensino Tecnico </div>
-                                            </div>
-                                            <div class="row border border-left-0 border-right-0 py-2">
-                                                <div class="col-md-3 text-md-right"><b>Documento de Identificação:</b>
-                                                </div>
-                                                <div class="col-md-9">000000389203610</div>
-                                            </div>
-                                            <div class="row border border-left-0 border-right-0 border-top-0 py-2">
-                                                <div class="col-md-3 text-md-right"><b>Emissor:</b></div>
-                                                <div class="col-md-9">UBES</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 mx-auto col-lg-2 col-md-4"><img class="rounded"
-                                                src="./gabriel.jpeg"
-                                                alt="Andre Augusto Nunes Vieira"></div>
-                                    </div>
-                                    <h5>Certificado de Atributo em formato PEM:</h5>
-                                    <div class="certificate-container">
-                                        <p class="text-center">-----BEGIN CERTIFICATE-----</p><span
-                                            class="certificate">MIID9TCCAt0CAQEwgY2ggYowgYSkgYEwfzELMAkGA1UEBhMCQlIxEzARBgNVBAoMCklDUC1CcmFzaWwxNjA0BgNVBAsMLVVOSUFPIEJSQVNJTEVJUkEgRE9TIEVTVFVEQU5URVMgU0VDVU5EQVJJU1RBUzEjMCEGA1UEAwwaQW5kcmUgQXVndXN0byBOdW5lcyBWaWVpcmECAQGggcMwgcCkgb0wgboxCzAJBgNVBAYTAkJSMRMwEQYDVQQKDApJQ1AtQnJhc2lsMRcwFQYDVQQLDA4xNDEyMTk1NzAwMDEwOTEOMAwGA1UECwwFVkFMSUQxGzAZBgNVBAsMElBlc3NvYSBKdXJpZGljYSBBMzEYMBYGA1UECwwPQUMgVkFMSUQgQlJBU0lMMTYwNAYDVQQDDC1VTklBTyBCUkFTSUxFSVJBIERPUyBFU1RVREFOVEVTIFNFQ1VOREFSSVNUQVMwDQYJKoZIhvcNAQEFBQACBADhYgYwIhgPMjAyNTAxMzAxMzU5MTdaGA8yMDI2MDMzMTIzNTk1OVowgc0wRgYFYEwBCgExPRM7MjAwNDE5OTg0Mzc1MDQyODg1OTAwMDAwMDAwMDAwMDAwMDAwMDAwMDM4OTIwMzYxMCAgICAgICAgICAwdgYFYEwBCgIxbRNrVGVhdHJvIEVzY29sYSBNYWN1bmFpbWEgICAgICAgICAgICAgICAgIFRFQ05JQ08gICAgICAgIEVuc2lubyBUZWNuaWNvICAgICAgICAgICAgICAgIEd1YXJ1bGhvcyAgICAgICAgICAgU1AwCwYFYEwBBAMxAhMAMHkwNQYDVR0fBC4wLKEqhihodHRwczovL3ViZXMuZG5lLnZjL3YxL2NybC91YmVzLmNybD9pZD0xMB0GA1UdIwQWgBQwYU0GvJCRVOTgbphEWiw0/MeEaTAhBggrBgEFBQcBAQQVMBMGCCsGAQUFBzACBAeGBUhUVFBTMA0GCSqGSIb3DQEBBQUAA4IBAQCpUgx9T+S+fFT9fhT4QkAyFxgR94EPSLquv1bqiN2TW4BvMwPbJUvxdnBTa5wqKB+pd4ly5n1+B4qwdgAK74ecU1T7Oqu3z9dBQYFM4ty+7plSXQ3Sm/Fd8uO3yxOlE4sQIhOqH0jBJTGthTtqERsB+ygpfqF8TF+f2WZ8wCuWgjt5lf1MVgszy0oMSqUZuU75o5q9XJuOHrMzBpX4FzCHdFUbAyrmSEHBlgEGYJzSevP8+MUpMnxX7Co5tpHFkWERFEW3e6PwMNGPNl66UWc7WohoSrevvrZFeGSv9g+Nc6bPAqGBeRtf2QFWj1Gt06VfOabKqRAXPgEDwZ+iWiL0</span><br><br>
-                                        <p class="text-center">-----END CERTIFICATE-----</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="global-alert">
-                    <div class="alert-center mx-auto ">
-                        <div class="alert global-alert-success text-center alert-success alert-dismissible d-none"
-                            role="alert"></div>
-                        <div class="alert global-alert-danger text-center alert-danger alert-dismissible  d-none"
-                            role="alert"></div>
-                        <div class="alert global-alert-warning text-center alert-warning alert-dismissible d-none"
-                            role="alert"></div>
-                    </div>
-                </div>
-            </div>
-            <footer class="pt-4 main-footer pb-3">
-                <div class="container">
-                    <h2 class="text-white font-title text-center mt-2 mb-4">meiaentrada.org.br</h2>
-                    <nav class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <ul class="py-0 my-0">
-                                <li class="py-1"><a title="Home" href="https://meiaentrada.org.br/">Home</a></li>
-                                <li class="py-1"><a title="O que diz a lei" href="https://meiaentrada.org.br/lei">Lei da
-                                        Meia-entrada</a></li>
-                                <li class="py-1"><a title="Validador oficial da CIE"
-                                        href="https://meiaentrada.org.br/chaves-publicas">Chaves públicas</a></li>
-                                <li class="py-1"><a title="Perguntas e Respostas"
-                                        href="https://meiaentrada.org.br/perguntas-e-respostas">FAQ</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6 col-md-3">
-                            <ul class="py-0 my-0">
-                                <li class="py-1"><a title="Notícias"
-                                        href="https://meiaentrada.org.br/noticias">Notícias</a></li>
-                                <li class="py-1"><a title="Termos de uso"
-                                        href="https://meiaentrada.org.br/termos">Termos de Uso e Política de
-                                        Privacidade</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="text-center mt-4"><span>@Meiaentrada.org.br - Todos os Direitos Reservados 2025</span>
-                    </div>
-                </div>
-            </footer>
-        </div>
+    <div id="title1">Já pagamos todo o dinheiro do Giovanni? 🤔</div>
+    <div id="title2">AINDA NÃO PAGAMOS 👎👎.</div>
+    <div id="title3">Estamos a X dias sem pagar o fotógrafo 😔👌.</div>
+    
+    <div id="imageContainer">
+        <img src="clown.png" alt="">
     </div>
-    <link href="./Meia-entrada estudantil_files/css" rel="stylesheet">
-    <script>window.recaptchaOptions = { lang: "pt-br" }</script>
-    <script type="text/javascript" src="./Meia-entrada estudantil_files/main.ce71e40a.js.download"></script>
-</body>
 
+    <script>
+        var dataEspecifica = new Date(2023, 11, 21);
+        var dataAtual = new Date();
+        var diferencaEmMilissegundos = dataAtual - dataEspecifica;
+        var diferencaEmDias = Math.floor(diferencaEmMilissegundos / (1000 * 60 * 60 * 24));
+        document.getElementById('title3').innerText = "Estamos a " + diferencaEmDias + " dias sem pagar o fotógrafo. 😔👌";
+    </script>
+</body>
 </html>
